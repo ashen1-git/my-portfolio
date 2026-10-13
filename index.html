@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Christian Bansil | Portfolio</title>
+  
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem("theme"); } catch (e) {}
+      if (!theme) {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home">My Portfolio<span></span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+          <span class="toggle-label" id="theme-label">Dark mode</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">BSIT STUDENT - Bulacan State University</p>
+        <h1>Hi, I'm <span>JC</span>.</h1>
+        <p class="intro">Information Technology undergraduate exploring web and game development, turning creative concepts into functional code and interactive projects.</p>
+        <a class="button" href="#projects">See my work</a>
+      </div>
+      <div class="hero-card" aria-label="Portfolio introduction">
+       
+        <div class="avatar">
+          <span>JC</span>
+          <img src="profile.jpg" alt="Photo of John Christian Bansil" onerror="this.style.display='none'">
+        </div>
+        <p class="card-title">John Christian C. Bansil</p>
+        <p class="card-note">Web Development · Game Development</p>
+      </div>
+    </section>
+
+   
+    <section class="section container" id="about">
+      <p class="eyebrow">A LITTLE ABOUT ME</p>
+      <h2>Getting better one project at a time.</h2>
+      <p class="section-copy">I'm an Information Technology student learning to build websites and develop programs. I'm also interested in game development and enjoy exploring how games are created. I like improving my coding skills and applying what I learn in class to build useful projects and explore new ideas.</p>
+
+      <h3 class="skills-title">Skills</h3>
+      <ul class="chips">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>C#</li>
+      </ul>
+    </section>
+
+   
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <p class="eyebrow">MY WORK</p>
+        <h2>Projects I've worked on</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-number">01</div>
+            <h3>Hotel Reservation System</h3>
+            <p>A simple Command Line Interface (CLI) application for managing hotel reservations.</p>
+            <span class="tag">Java</span>
+          </article>
+          <article class="project-card">
+            <div class="project-number">02</div>
+            <h3>Point of Sale System</h3>
+            <p>A simple checkout interface designed to calculate totals, manage items, and process basic retail transactions.</p>
+            <span class="tag">HTML · CSS · JS</span>
+          </article>
+          <article class="project-card">
+            <div class="project-number">03</div>
+            <h3>Portfolio Website</h3>
+            <p>This site: a responsive blue-themed portfolio with a dark mode button and a few small interactive features.</p>
+            <span class="tag">HTML · CSS · JS</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="footer" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-intro">
+        <h2>Contact</h2>
+        <p>Feel free to reach out if you'd like to get in touch.</p>
+        <a class="contact-cta" href="mailto:jcbansil.1121@gmail.com">Email me</a>
+        <p class="form-note" id="hello-message">Thanks for visiting my portfolio.</p>
+        <button class="text-button" id="hello-button" type="button">Click for a quick hello</button>
+      </div>
+
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:jcbansil.1121@gmail.com">
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <span class="meta"><small>Email</small>jcbansil.1121@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ashen1-git" target="_blank" rel="noopener">
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
+            </span>
+            <span class="meta"><small>GitHub</small>github.com/ashen1-git</span>
+          </a>
+        </li>
+        <li>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> John Christian Bansil. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
